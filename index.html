@@ -1,8 +1,7 @@
 <!doctype html>
 <html>
-	
 <script>	
-function load(value) {
+function loadJS(value) {
 	alert(value);
 	//Création de la balise
 	var js = document.createElement('script');
@@ -10,18 +9,16 @@ function load(value) {
 	js.src = value ;
 	var monNouveauCode = function() 
 	{
-		alert('Chargement de terminé')
+		alert('Chargement terminé')
 	};
 	var monCodeEncours = function() 
 	{
-		alert('Chargement de  en cours')
-		load2()
+		alert('Chargement en cours')
 	};
 	js.onreadystatechange = monNouveauCode;
 	js.onload = monCodeEncours;
 	//Ajout de la balise dans la page
 	document.head.appendChild(js);
-	
 }
 
 
